@@ -1,37 +1,23 @@
-{% extends "global/extends/base.html" %}
-{% load static %}
+{% extends "extends/base.html" %} {% load static %} {% block main %}
 
-{% block main %}
+<main class="main">
+  <div class="singleFrame">
+    <div class="newspaper">
+      <div class="newspaper_title">{{ newspaper.title }}</div>
 
-  <main class="main">
+      <div class="newspaper_author">By {{ newspaper.author }}</div>
 
-    <div class="singleFrame">
+      <div class="newspaper_postedAt">
+        Posted at {{ newspaper.created_at|date:"nS F, Y" }}
+      </div>
 
-      <div class="newspaper">
+      <div class="newspaper_body">
+        {% autoescape off %} {{ newspaper.body }} {% endautoescape %}
+      </div>
 
-        <div class="newspaper_title">
-          {{ newspaper.title }}
-        </div>
+      {% include "includes/footer_actions.html" %}
 
-        <div class="newspaper_author">
-          By {{ newspaper.author }}
-        </div>
-
-        <div class="newspaper_postedAt">
-          Posted at {{ newspaper.created_at|date:"nS F, Y" }}
-        </div>
-
-        <div class="newspaper_body">
-          {% autoescape off %}
-            {{ newspaper.body }}
-          {% endautoescape %}
-
-        </div>
-
-        {% include "global/includes/footer_actions.html" %}
-
-
-        <!-- <div class="paper updateLogs">
+      <!-- <div class="paper updateLogs">
           <div class="paper_headline">
             HEADLINE
           </div>
@@ -71,11 +57,8 @@
   
           </ul>
         </div> -->
-
-      </div>
-      
     </div>
-
-  </main>
+  </div>
+</main>
 
 {% endblock %}

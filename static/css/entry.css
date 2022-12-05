@@ -1,4 +1,4 @@
-@import url(utils/export.css);
+@import url(./normalize.css);
 @import url(config/export.css);
 @import url(components/export.css);
 @import url(components/math/export.css);
