@@ -1,0 +1,33 @@
+.newspaper {
+  margin-bottom: 20px;
+}
+.newspaper_title {
+  font: var(--titleSerifFont);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.newspaper_author {
+  font: var(--bodyFont);
+  padding: 12px 0 2px 0;
+}
+.newspaper_postedAt {
+  font: var(--bodyFont);
+  padding: 2px 0 12px 0;
+  color: var(--lightGray);
+}
+.newspaper_body {
+  font: var(--bodySerifFont);
+}
+.newspaper_footer {
+  padding: 30px 10px 30px 10px;
+}
+.newspaper_footer_action {
+  justify-content: flex-start;
+  display: flex;
+  gap: 18px;
+}
+.newspaper_footer_action_item {
+  cursor: pointer;
+}

@@ -1,0 +1,107 @@
+{% extends "global/extends/base.html" %}
+{% load static %}
+
+{% block main %}
+
+<main class="main">
+
+  <div class="tripleFrame">
+
+    <aside class="tripleFrame_aside">
+      <div class="topicNews">
+        <ul class="newspaperList">
+          {% for picked_up_newspaper in picked_up_newspapers %}
+          <li class="newspaperList_item">
+    
+            <div class="newspaperList_item_title">
+              <a class="hoverableLink" href="{% url 'pages:article_detail' picked_up_article.pk %}">{{ picked_up_newspaper.title }}</a>
+            </div>
+    
+            <div class="newspaperList_item_author">
+              By {{ picked_up_newspaper.author }}
+            </div>
+    
+            <div class="newspaperList_item_description">
+              {{ picked_up_newspaper.description }}
+            </div>
+    
+          </li>
+
+          {% empty %}
+          
+            <div class="newspaperList_item_title">
+              No Article was picked up
+            </div>
+
+          {% endfor %}
+        
+        </ul>
+      </div>
+    </aside>
+
+    <div class="tripleFrame_main">
+      <ul class="newspaperList">
+
+        {% for newspaper in newspapers %}
+        <li class="newspaperList_item">
+  
+          <div class="newspaperList_item_thumbnail">
+            <img src="{{ newspaper.thumbnail.url }}" alt="">
+          </div>
+
+          <div class="newspaperList_item_caption">
+            {{ newspaper.caption }}
+          </div>
+  
+          <div class="newspaperList_item_title">
+            <a class="hoverableLink" href="{% url 'newspapers:newspaper_detail' newspaper.pk %}">{{ newspaper.title }}</a>
+          </div>
+  
+          <div class="newspaperList_item_author">
+            By {{ newspaper.author }}
+          </div>
+  
+          <div class="newspaperList_item_description">
+            {{ newspaper.description }}
+          </div>
+  
+        </li>
+
+        {% empty %}
+        <div class="newspaperList_item_title">
+          No Article was posted
+        </div>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    <nav class="tripleFrame_nav">
+      <ul class="newspaperList">
+        <li class="newspaperList_item">
+
+          <div class="newspaperList_item_pickUp">
+            Live Article
+          </div>
+  
+          <div class="newspaperList_item_title">
+            Website design policy published
+          </div>
+  
+          <div class="newspaperList_item_author">
+            By okmtyuta
+          </div>
+  
+          <div class="newspaperList_item_description">
+            Website design policy published.
+          </div>
+  
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+</main>
+
+{% endblock %}

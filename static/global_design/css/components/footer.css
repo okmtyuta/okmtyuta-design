@@ -1,0 +1,46 @@
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .footerCopyRight {
+    font: var(--captionFont);
+    border-top: var(--themeColor) solid 1px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .footerMenuItem {
+    font: var(--subBodyFont);
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .footerCopyRight {
+    font: var(--captionFont);
+    border-top: var(--themeColor) solid 1px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .footerMenuItem {
+    font: var(--subBodyFont);
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .footer {
+    grid-area: footer;
+  }
+  .footerCopyRight {
+    font: var(--captionFont);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .footerMenuItem {
+    font: var(--subBodyFont);
+  }
+}

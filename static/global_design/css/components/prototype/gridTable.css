@@ -1,0 +1,35 @@
+/* Common */
+
+
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .gridTable {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+  .gridTable_item {
+    padding: 20px 10px;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .gridTable {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  .gridTable_item {
+    padding: 20px 10px;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .gridTable {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .gridTable_item {
+    padding: 20px 10px;
+  }
+}

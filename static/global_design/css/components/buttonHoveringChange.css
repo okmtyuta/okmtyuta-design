@@ -1,0 +1,16 @@
+.buttonHoveringChange{
+  padding: 1em 2em;
+  width: 150px;
+  color: var(--defaultWhite);
+  font: var(--buttonFont);
+  background-color: var(--themeColor);
+  transition: background-color 0.3s;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.buttonHoveringChange:hover {
+  text-decoration: none;
+  background-color: var(--white);
+  color: var(--themeColor);
+  outline: var(--themeColor) solid 2px;
+}

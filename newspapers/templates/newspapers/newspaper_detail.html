@@ -1,0 +1,81 @@
+{% extends "global/extends/base.html" %}
+{% load static %}
+
+{% block main %}
+
+  <main class="main">
+
+    <div class="singleFrame">
+
+      <div class="newspaper">
+
+        <div class="newspaper_title">
+          {{ newspaper.title }}
+        </div>
+
+        <div class="newspaper_author">
+          By {{ newspaper.author }}
+        </div>
+
+        <div class="newspaper_postedAt">
+          Posted at {{ newspaper.created_at|date:"nS F, Y" }}
+        </div>
+
+        <div class="newspaper_body">
+          {% autoescape off %}
+            {{ newspaper.body }}
+          {% endautoescape %}
+
+        </div>
+
+        {% include "global/includes/footer_actions.html" %}
+
+
+        <!-- <div class="paper updateLogs">
+          <div class="paper_headline">
+            HEADLINE
+          </div>
+  
+          <ul class="itemization">
+  
+            <li class="itemization_item">
+              <div class="itemization_item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization_item">
+              <div class="itemization_item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization_item">
+              <div class="itemization_item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization_item">
+              <div class="itemization_item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization_item">
+              <div class="itemization_item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+  
+          </ul>
+        </div> -->
+
+      </div>
+      
+    </div>
+
+  </main>
+
+{% endblock %}

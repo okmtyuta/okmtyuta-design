@@ -1,0 +1,241 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WT8DJKJ66"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3WT8DJKJ66');
+    </script>
+
+    <title>Article | Nostalon</title>
+
+    {% if description %}
+      <meta name="description" content="{{ description }}">
+    {% else %}
+      <meta name="description" content="Free Web tutorials">
+    {% endif %}
+
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="{% static 'global_design/css/entry.css' %}">
+
+    <!-- scripts -->
+    <script type="module" src="{% static 'global_design/js/entry.js' %}"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="{% static 'global/media/NontalonLogo.png' %}">
+
+    <!-- Google Font references -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&family=UnifrakturMaguntia&display=swap" rel="stylesheet">  
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- third party library -->
+    <script src="https://kit.fontawesome.com/c226d01fbd.js" crossorigin="anonymous"></script>
+
+
+    <!-- Twitter Card -->
+    {% include "global/includes/twitter_card.html" %}
+  </head>
+
+
+  <body>
+    
+    <header class="header">
+      
+      <div class="headerLogo">
+        <div class="nostalonLogoWhiten --titleCharSize">
+          <a class="noDecoratedLink" href="{% url 'pages:nostalon_top' %}">okmtyuta</a>
+        </div>
+      </div>
+
+      <ul class="rowList--grid headerUtils">
+        <a class="underlineWhenHoverFromCenter embeddedLink" href="{% url 'pages:coming_soon' %}">
+          <li class="itemWithIcon headerMenuItem">
+            <span class="material-symbols-outlined">
+              search
+            </span>
+            <div class="itemWithIconContent">
+              Search
+            </div>
+          </li>
+        </a>
+
+        <a class="underlineWhenHoverFromCenter embeddedLink" href="{% url 'admin:index' %}">
+          <li class="itemWithIcon headerMenuItem">
+            <span class="material-symbols-outlined">
+              person
+            </span>
+            <div class="itemWithIconContent">
+              Log In
+            </div>
+          </li>
+        </a>
+      </ul>
+
+      <ul class="rowList--grid headerMenu">
+        <a class="underlineWhenHoverFromCenter embeddedLink" href="{% url 'pages:coming_soon' %}">
+          <li class="itemWithIcon headerMenuItem">
+            <span class="material-symbols-outlined">
+              functions
+            </span>
+            <div class="itemWithIconContent">
+              Math
+            </div>
+          </li>
+        </a>
+
+        <a class="underlineWhenHoverFromCenter embeddedLink" href="{% url 'pages:coming_soon' %}">
+          <li class="itemWithIcon headerMenuItem">
+            <span class="material-symbols-outlined">
+              gesture
+            </span>
+            <div class="itemWithIconContent">
+              Illust
+            </div>
+          </li>
+        </a>
+
+        <a class="underlineWhenHoverFromCenter embeddedLink" href="{% url 'pages:coming_soon' %}">
+          <li class="itemWithIcon headerMenuItem">
+            <span class="material-symbols-outlined">
+              photo
+            </span>
+            <div class="itemWithIconContent">
+              Picture
+            </div>
+          </li>
+        </a>
+
+        <a class="underlineWhenHoverFromCenter embeddedLink" href="{% url 'pages:coming_soon' %}">
+          <li class="itemWithIcon headerMenuItem">
+            <span class="material-symbols-outlined">
+              code
+            </span>
+            <div class="itemWithIconContent">
+              Dev
+            </div>
+          </li>
+        </a>
+
+        <a class="underlineWhenHoverFromCenter embeddedLink" href="{% url 'articles:article_list' %}">
+          <li class="itemWithIcon headerMenuItem">
+            <span class="material-symbols-outlined">
+              article
+            </span>
+            <div class="itemWithIconContent">
+              Articles
+            </div>
+          </li>
+        </a>
+
+      </ul>
+
+    </header>
+    
+
+    {% block main %}
+    {% endblock %}
+
+
+    <footer class="footer">
+
+
+      <div class="band-50">
+      </div>
+
+
+      <div class="forDesktopAndTablet singleFrame">
+
+        <ul class="rowList--flex --annotationCharSize">
+
+          <li class="footerMenuSection">
+            <div class="footerMenuCategory thirdHeadlineWithLeftLine">
+              More Info
+            </div>
+            <ul class="footerMenuList colList">
+              <li class="footerMenuItem colListItem">
+                <a class="embeddedLink" href="./coding_rules.html">
+                  Coding Rules
+                </a>
+              </li>
+              <li class="footerMenuItem colListItem">
+                <a class="embeddedLink" href="./styling_guide.html">
+                  Styling Guidelines
+                </a>
+              </li>
+              <li class="footerMenuItem colListItem">
+                <a class="embeddedLink" href="./nostalon_creation_exhibition.html">
+                  Atelier
+                </a>
+              </li>
+              <li class="footerMenuItem colListItem">
+                <a class="embeddedLink" href="./css_animation.html">
+                  Anime
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="footerMenuSection">
+            <div class="footerMenuCategory thirdHeadlineWithLeftLine">
+              SNS
+            </div>
+            <ul class="footerMenuList rowList--flex">
+
+              <li class="footerMenuItem colListItem">
+                <a class="embeddedLink" href="{% url 'pages:coming_soon' %}"><i class="fa-brands fa-twitter fa-2x"></i></a>
+              </li>
+              <li class="footerMenuItem colListItem">
+                <a class="embeddedLink" href="{% url 'pages:coming_soon' %}"><i class="fa-brands fa-youtube fa-2x"></i></a>
+              </li>
+              
+            </ul>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <ul class="forMobile">
+
+        <li>
+          <a class="bandLink" href="{% url 'pages:coming_soon' %}">
+            <div class="bandLinkContent">
+              To be prepared
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a class="bandLink" href="{% url 'pages:coming_soon' %}">
+            <div class="bandLinkContent">
+              To be prepared
+            </div>
+          </a>
+        </li>
+
+      </ul>
+
+
+      <div class="footerCopyRight">
+        2020 - 2022 © Nostalon
+      </div>
+
+    </footer>
+
+
+  </body>
+</html>

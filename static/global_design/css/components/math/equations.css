@@ -1,0 +1,22 @@
+.equation {
+  overflow-x: scroll;
+}
+.equation::-webkit-scrollbar {
+  display:none;
+}
+.mathPaper {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .5);
+  border-radius: 3px;
+  padding: 20px;
+  margin: 16px 0;
+}
+.theorem::before {
+  content: "(Thm)";
+  font-weight: 300;
+  font-family: var(--serifFont);
+}
+.def::before {
+  content: "(Def)";
+  font-weight: 300;
+  font-family: var(--serifFont);
+}

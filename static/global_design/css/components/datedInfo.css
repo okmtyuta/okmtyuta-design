@@ -1,0 +1,56 @@
+.datedInfo {
+  font: var(--subBodyFont);
+}
+.datedInfoItem {
+  display: grid;
+  align-items: center;
+  grid-gap: 40px;
+  list-style: none;
+  color: var(--defaultCharColor);
+  border-bottom: var(--themeColor) dotted 1px;
+  padding: 16px 0;
+}
+.datedInfoItem:hover {
+  color: var(--themeColor);
+}
+.datedInfoDate {
+  font: var(--subBodyStrongFont);
+  grid-area: datedInfoDate;
+}
+.datedInfoContent {
+  grid-area: datedInfoContent;
+  font: var(--subBodyFont);
+}
+.allUpdateInfo {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Common */
+
+
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .datedInfoItem {
+    grid-template: "datedInfoDate datedInfoContent"/
+                  1fr           5fr;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .datedInfoItem {
+    grid-template: "datedInfoDate datedInfoContent"/
+                  1fr           5fr;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .datedInfoItem {
+    grid-template: "datedInfoDate datedInfoContent"/
+                  1fr           2fr;
+  }
+}

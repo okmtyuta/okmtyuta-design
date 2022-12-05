@@ -1,0 +1,75 @@
+{% extends "global/extends/base.html" %}
+{% load static %}
+
+{% block main %}
+
+<main class="main">
+
+  <div class="doubleFrame">
+
+    <div class="doubleFrame_main">
+      <ul class="articleList">
+
+        {% for article in articles %}
+        <li class="articleList_item">
+  
+          <div class="articleList_item_thumbnail">
+            <img src="{{ article.thumbnail.url }}" alt="">
+          </div>
+
+          <div class="articleList_item_caption">
+            {{ article.caption }}
+          </div>
+  
+          <div class="articleList_item_title">
+            <a class="hoverableLink" href="{% url 'articles:article_detail' article.pk %}">{{ article.title }}</a>
+          </div>
+  
+          <div class="articleList_item_author">
+            By {{ article.author }}
+          </div>
+  
+          <div class="articleList_item_description">
+            {{ article.description }}
+          </div>
+  
+        </li>
+
+        {% empty %}
+        <div class="articleList_item_title">
+          No Article was posted
+        </div>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    <nav class="doubleFrame_nav">
+      <ul class="articleList">
+        <li class="articleList_item">
+
+          <div class="articleList_item_pickUp">
+            Live Article
+          </div>
+  
+          <div class="articleList_item_title">
+            Website design policy published
+          </div>
+  
+          <div class="articleList_item_author">
+            By okmtyuta
+          </div>
+  
+          <div class="articleList_item_description">
+            Website design policy published.
+          </div>
+  
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+
+</main>
+
+{% endblock %}

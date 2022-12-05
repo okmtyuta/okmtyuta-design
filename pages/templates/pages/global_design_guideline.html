@@ -1,0 +1,96 @@
+{% extends "global/extends/base.html" %}
+{% load static %}
+
+{% block main %}
+
+<main class="main">
+
+  <div class="singleFrame">
+
+    <div class="headlineWithLeftLine">
+      Design Philosophy
+    </div>
+
+    <p class="paragraph">
+      Our website is designed based on following philosophy.
+      <ul class="itemization">
+        
+        <li class="itemization_item">
+
+          <div class="itemization_item_heading">
+            Material Design
+          </div>
+
+          Most of idea is referred from <a class="explicitLink" href="https://material.io/">Material Design</a> developed by Google. 
+
+        </li>
+
+        <li class="itemization_item">
+
+          <div class="itemization_item_heading">
+            Reusable Components
+          </div>
+
+          Components on our website is designed to be utilized for all over our website.
+
+        </li>
+
+        <li class="itemization_item">
+
+          <div class="itemization_item_heading">
+            Simple but Rich
+          </div>
+
+          We aim fast user experience, but do not provide poor time.
+
+        </li>
+
+        <li class="itemization_item">
+
+          <div class="itemization_item_heading">
+            Well-animated
+          </div>
+
+          We offer cool animation as better user experience.
+
+        </li>
+        
+      </ul>
+    </p>
+
+    <div class="headlineWithLeftLine">
+      Colours
+    </div>
+
+    <p class="paragraph">
+      Colours are selected from traditional colours, especially Japanese traditional ones, referring from 
+      "<a class="explicitLink" href="https://www.colourdic.org/w">和色大辞典 (Japanese colour unabridged dictionary)</a>" which offer Japanese colours' code. Based on material design principal, we utilize three colours showed below.
+    </p>
+    
+    <div class="gridTable colourList">
+      <div class="gridTable_item suou">
+        Theme colour <br> "蘇芳 (Suou)" #9e3d3f
+      </div>
+      <div class="gridTable_item konpeki">
+        Second Theme colour <br> "Konpeki" #007bbb
+      </div>
+      <div class="gridTable_item moegi">
+        Third Theme colour <br> "Moegi" #aacf53
+      </div>
+      <div class="gridTable_item yohkan">
+        Main Char colour <br> "Yohkan" #383c3c
+      </div>
+    </div>
+
+    <p class="paragraph">
+      "Suou (蘇芳)" is a black tinge red colour extracted from Suho (蘇芳), a small tall tree of the Fabaceae family. "Konpeki (紺碧)" is a deep and dark blue like the sunny blue sky in midsummer. "Moegi (萌黄)" is a bright yellow-green colour like young leaves sprouting in early spring. "Yohkan (羊羹)" is a reddish black and purple colour. We consider that all colours are can well expressed our website's calm atmosphere, and this is the reason why these colours are selected.
+    </p>
+
+    {% include "global/includes/footer_actions.html" %}
+  </div>
+
+
+
+</main>
+
+{% endblock %}

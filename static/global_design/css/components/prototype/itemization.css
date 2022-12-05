@@ -1,0 +1,13 @@
+.itemization {
+  list-style: none;
+  padding: 5px 20px;
+}
+.itemization_item {
+  padding: 6px 0;
+}
+.itemization_item_heading {
+  /* text-decoration: underline; */
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 12px 0 0;
+}

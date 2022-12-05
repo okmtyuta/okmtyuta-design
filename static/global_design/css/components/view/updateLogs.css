@@ -1,0 +1,29 @@
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .updateLogs {
+    padding: 30px;
+    overflow: scroll;
+    max-height: 300px;
+    margin: 20px 0;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .updateLogs {
+    padding: 15px;
+    overflow: scroll;
+    max-height: 100px;
+    margin: 20px 0;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .updateLogs {
+    padding: 15px;
+    overflow: scroll;
+    max-height: 100px;
+    margin: 20px 0;
+  }
+}

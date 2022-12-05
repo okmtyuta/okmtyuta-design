@@ -1,0 +1,77 @@
+.pageTitle {
+  font: var(--titleFont);
+  color: var(--defaultCharColor);
+  padding-bottom: 20px;
+}
+.headlineWithLeftLine {
+  font: var(--firstHeadlineFont);
+  border-left: var(--themeColor) 4px solid;
+  padding: 2px 14px;
+  margin: 20px 0;
+}
+.thirdHeadlineWithLeftLine {
+  font: var(--thirdHeadlineFont);
+  border-left: var(--themeColor) 4px solid;
+  padding: 2px 14px;
+  margin: 20px 0;
+}
+.headlineWithBall {
+  position: relative;
+  font-weight: bold;
+  font: var(--firstHeadlineFont);
+  margin: 20px 20px;
+}
+.headlineWithBall::before {
+  content: "";
+	width: calc(var(--mainCharSize) * 0.5);
+	height: calc(var(--mainCharSize) * 0.5);
+  position: absolute;
+  top: 50%;
+  left: calc(-10px - var(--mainCharSize) * 0.5 / 2);
+  margin-top:calc(var(--mainCharSize) * -0.5 * 0.5);
+	border-radius: calc(var(--mainCharSize)  * 0.5 / 2);
+	background-color: var(--themeColor);
+}
+
+.headlineWithUnderlineThemed {
+  position: relative;
+  font: var(--firstHeadlineFont);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.headlineWithUnderlineThemed::before {
+  position: absolute;
+  width: 100%;
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  left: 0;
+  height: 2px;
+  background: var(--lighterGray);
+}
+.headlineWithUnderlineThemed_main {
+  position: relative;
+}
+.headlineWithUnderlineThemed_main::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  background-color: var(--themeColor);
+  display: block;
+  width: 100%;
+  z-index: 2;
+}
+.headlineWithUnderlineThemed_sub {
+  color: var(--lighterGray);
+  font: var(--captionFont);
+} 
+
+.headlineNormal {
+  font: var(--firstHeadlineFont);
+  font-weight: bold;
+}

@@ -1,0 +1,20 @@
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .forMobile {
+    display: none;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .forMobile {
+    display: none;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .forDesktopAndTablet {
+    display: none;
+  }
+}

@@ -1,0 +1,86 @@
+/* Common Series */
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&family=Roboto+Slab:wght@100;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&family=UnifrakturMaguntia&display=swap');
+
+:root {
+  /* font family */
+  --serifFont:          'Times New Roman', "Hiragino Mincho ProN", "Roboto Slab", "游明朝", serif;
+  --gothicFont:         "Roboto", "Hiragino Kaku Gothic ProN", "游ゴシック","メイリオ", sans-serif;
+  --typeWriterFont:     'Nixie One', cursive;
+  --robotoFont:         'Roboto', sans-serif;
+  --frakturFont:        'UnifrakturMaguntia', cursive;
+}
+
+/* For PC */
+@media screen and (min-width: 1025px) {
+  :root {
+    /* fonts variable */
+    --titleFont:          300 30px var(--gothicFont);
+
+    --firstHeadlineFont:  400 24px var(--gothicFont);
+    --secondHeadlineFont: 500 20px var(--gothicFont);
+    --thirdHeadlineFont:  400 14px var(--gothicFont);
+
+    --bodyFont:           300 18px var(--gothicFont);
+    --bodyStrongFont:           600 18px var(--gothicFont);
+    --subBodyFont:        300 14px var(--gothicFont);
+    --subBodyStrongFont:        600 14px var(--gothicFont);
+
+    --buttonFont:         400 14px var(--gothicFont);
+    --captionFont:        400 12px var(--gothicFont);
+    --overlineFont:       400 10px var(--gothicFont);
+
+    --titleSerifFont:      400 48px var(--serifFont);
+    --headlineSerifFont:   400 30px var(--serifFont);
+    --bodySerifFont:       400 18px var(--serifFont);
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  :root {
+    /* fonts variable */
+    --titleFont:          300 24px var(--gothicFont);
+
+    --firstHeadlineFont:  400 16px var(--gothicFont);
+    --secondHeadlineFont: 500 14px var(--gothicFont);
+    --thirdHeadlineFont:  400 12px var(--gothicFont);
+
+    --bodyFont:           300 14px var(--gothicFont);
+    --bodyStrongFont:           600 14px var(--gothicFont);
+    --subBodyFont:        400 12px var(--gothicFont);
+    --subBodyStrongFont:        600 12px var(--gothicFont);
+
+    --buttonFont:         400 10px var(--gothicFont);
+    --captionFont:        400 10px var(--gothicFont);
+    --overlineFont:       400 10px var(--gothicFont);
+
+    --titleSerifFont:      400 30px var(--serifFont);
+    --headlineSerifFont:   400 24px var(--serifFont);
+    --bodySerifFont:       400 16px var(--serifFont);
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  :root {
+    /* fonts variable */
+    --titleFont:          300 24px var(--gothicFont);
+
+    --firstHeadlineFont:  400 16px var(--gothicFont);
+    --secondHeadlineFont: 500 14px var(--gothicFont);
+    --thirdHeadlineFont:  400 12px var(--gothicFont);
+
+    --bodyFont:           300 14px var(--gothicFont);
+    --bodyStrongFont:           600 14px var(--gothicFont);
+    --subBodyFont:        400 12px var(--gothicFont);
+    --subBodyStrongFont:        600 12px var(--gothicFont);
+
+    --buttonFont:         400 10px var(--gothicFont);
+    --captionFont:        400 10px var(--gothicFont);
+    --overlineFont:       400 10px var(--gothicFont);
+
+    --titleSerifFont:      400 30px var(--serifFont);
+    --headlineSerifFont:   400 24px var(--serifFont);
+    --bodySerifFont:       400 16px var(--serifFont);
+  }
+}

@@ -1,0 +1,7 @@
+.colList {
+  list-style: none;
+  font: var(--bodyFont);
+}
+.colListItem {
+  padding: 3px;
+}

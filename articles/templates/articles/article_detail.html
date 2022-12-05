@@ -1,0 +1,65 @@
+{% extends "global/extends/base.html" %}
+{% load static %}
+
+{% block main %}
+
+<main class="main">
+
+  <div class="doubleFrame">
+
+    
+    <div class="doubleFrame_main">
+      
+      <div class="pageTitle">
+        {{ article.title }}
+      </div>
+
+      <div class="article">
+
+        <div class="articleCreatedAt">
+          {{ article.created_at|date:"nS F, Y" }}
+        </div>
+
+        <div class="articleBody">
+
+          {{ article.body }}Djangoではテンプレート上で表示させる日付のフォーマットを任意で変更することが可能です。表示の変更方法はテンプレートの組み込みフィルタ「date」を利用し、引数に書式を指定することで設定します。
+
+          引数での書式設定に使えるフォーマット文字列は下記の一覧表ご参照ください。
+          
+          
+          
+        </div>
+
+        <div class="itemWithIcon articleInfo">
+          <div class="articleInfoAuthor">
+            ISUUED BY {{ article.author }}
+          </div>
+          <img src="{% static 'pages/media/generalLib.jpeg' %}" class="articleInfoAuthorIcon circleIcon">
+        </div>
+
+      </div>
+
+      {% include "global/includes/footer_actions.html" %}
+
+    </div>
+
+    <div class="doubleFrame_nav --stick">
+
+      <div class="headlineWithLeftLine">
+        Getting Started
+      </div>
+      <ul class="colList">
+        <li class="colListItem">INSTALLATION</li>
+        <li class="colListItem">CREATE APP</li>
+        <li class="colListItem">fjaklf</li>
+        <li class="colListItem">fjaklf</li>
+      </ul>
+
+    </div>
+
+
+  </div>
+
+</main>
+
+{% endblock %}

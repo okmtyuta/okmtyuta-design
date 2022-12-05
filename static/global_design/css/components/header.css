@@ -1,0 +1,111 @@
+/* For PC */
+@media screen and (min-width: 1025px) {
+  header {
+    display: grid;
+    grid-template: 
+      "headerLogo headerMenu  headerUtils" /
+      2fr         6fr         2fr
+    ;
+    grid-area: header;
+    font: var(--bodyFont);
+  }
+  .headerLogo {
+    background-color: var(--themeColor);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-area: headerLogo;
+    font-size: 24px;
+  }
+  .headerUtils {
+    grid-area: headerUtils;
+    color: var(--defaultCharColor);
+  }
+  .headerMenu {
+    grid-area: headerMenu;
+    color: var(--defaultCharColor);
+  }
+  .headerMenuItem {
+    border-bottom: var(--lighterGray) 1px solid;
+    box-sizing: border-box;
+    justify-content: center;
+    font: var(--subBodyFont);
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .header {
+    display: grid;
+    grid-template: 
+      "headerLogo headerUtils"  1fr
+      "headerMenu headerMenu"   1fr/
+      6fr         4fr  
+    ;
+    grid-area: header;
+    font: var(--bodyFont);
+    background-color: var(--themeColor);
+  }
+  .headerLogo {
+    background-color: var(--themeColor);
+    display: grid;
+    align-content: center;
+    grid-area: headerLogo;
+    font-size: 24px;
+    padding-left: 24px;
+  }
+  .headerMenu {
+    grid-area: headerMenu;
+    color: var(--defaultWhite);
+  }
+  .headerUtils {
+    grid-area: headerUtils;
+    color: var(--defaultWhite);
+  }
+  .headerMenuItem {
+    justify-content: center;
+    font: var(--subBodyFont);
+  }
+  .headerMenuItem:hover {
+    background-color: var(--defaultWhite);
+    justify-content: center;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .header {
+    display: grid;
+    grid-template: 
+      "headerLogo headerUtils"  1fr
+      "headerMenu headerMenu"   1fr/
+      6fr         4fr  
+    ;
+    grid-area: header;
+    font: var(--bodyFont);
+    background-color: var(--themeColor);
+  }
+  .headerLogo {
+    background-color: var(--themeColor);
+    display: grid;
+    align-content: center;
+    grid-area: headerLogo;
+    font-size: 24px;
+    padding-left: 24px;
+  }
+  .headerMenu {
+    grid-area: headerMenu;
+    color: var(--defaultWhite);
+  }
+  .headerUtils {
+    grid-area: headerUtils;
+    color: var(--defaultWhite);
+  }
+  .headerMenuItem {
+    justify-content: center;
+    font: var(--subBodyFont);
+  }
+  .headerMenuItem:hover {
+    background-color: var(--defaultWhite);
+  }
+}

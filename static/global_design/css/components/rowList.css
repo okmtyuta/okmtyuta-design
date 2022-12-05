@@ -1,0 +1,11 @@
+.rowList--grid {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+}
+.rowList--flex {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 20px;
+}

@@ -1,0 +1,72 @@
+/* For PC */
+@media screen and (min-width: 1025px) {
+  :root {
+    --themeColor:#9e3d3f;
+    --secondThemeColor: #007bbb;
+    --defaultLinkColor:#9e3d3f;
+    --defaultVisitedColor:#9e3d3f;
+  
+    --defaultCharColor:#383c3c;
+    --lightGray:#8c8c8c;
+    --lighterGray:#b4b4b4;
+    --lightestGray: #f2f2f2;;
+    --deepRed:#a22041;
+    --defaultWhite:#ffffff;
+    --defaultBlack:#000000;
+  
+    --mainCharSize: 16px;
+    --titleCharSize: 30px;
+    --headlineCharSize: 20px;
+    --annotationCharSize: 12px;
+    --lineHeight: 1.5;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  :root {
+    --themeColor:#007bbb;
+    --secondThemeColor: #9e3d3f;
+    --defaultLinkColor:#9e3d3f;
+    --defaultVisitedColor:#9e3d3f;
+  
+    --defaultCharColor:#3c3c3c;
+    --lightGray:#8c8c8c;
+    --lighterGray:#b4b4b4;
+    --lightestGray: #f2f2f2;;
+    --deepRed:#a22041;
+    --defaultWhite:#ffffff;
+    --defaultBlack:#000000;
+  
+    --mainCharSize: 12px;
+    --titleCharSize: 24px;
+    --headlineCharSize: 16px;
+    --annotationCharSize: 12px;
+    --lineHeight: 1.4;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  :root {
+    --themeColor: #aacf53;
+    --secondThemeColor: #9e3d3f;
+    --thirdThemeColor: #007bbb; 
+    --defaultLinkColor:#9e3d3f;
+    --defaultVisitedColor:#9e3d3f;
+  
+    --defaultCharColor:#3c3c3c;
+    --lightGray:#8c8c8c;
+    --lighterGray:#b4b4b4;
+    --lightestGray: #f2f2f2;;
+    --deepRed:#a22041;
+    --defaultWhite:#ffffff;
+    --defaultBlack:#000000;
+  
+    --mainCharSize: 12px;
+    --titleCharSize: 24px;
+    --headlineCharSize: 16px;
+    --annotationCharSize: 12px;
+    --lineHeight: 1.4;
+  }
+}

@@ -1,0 +1,182 @@
+{% extends "global/extends/base.html" %}
+{% load static %}
+
+{% block main %}
+    
+
+  <main class="main">
+
+    <div class="singleFrame">
+
+      <div class="headlineWithLeftLine --headlineCharSize">
+        TOPICS
+      </div>
+
+      <ul class="itemization">
+        <li class="itemization_item">
+          <div class="itemization_item_heading">
+            <a class="hoverableLink" href="{% url 'pages:global_design_guideline' %}">Design Policy Design Philosophy Is Published.</a>
+          </div>
+          
+        </li>
+
+        <li class="itemization_item">
+          <div class="itemization_item_heading">
+            <a class="hoverableLink" href="{% url 'newspapers:newspaper_list' %}">
+              Newspaper Page Is Available.
+            </a>
+          </div>
+          
+        </li>
+      </ul>
+
+      <!-- <div class="cardList">
+        
+          <a class="embeddedLink card --cardIsNew" href="./nostalon_article_detail.html">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize">
+              東京大学で撮りました!
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+          <a class="embeddedLink card" href="#">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize">
+              東京大学で撮りました!
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+          <a class="embeddedLink card" href="#">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize">
+              東京大学で撮りました!
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+          <a class="embeddedLink card" href="#">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize">
+              東京大学で撮りました!
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+          <a class="embeddedLink card" href="#">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize">
+              東京大学で撮りました!
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+          <a class="embeddedLink card" href="#">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize fullWidthParagraph">
+              東京大学で撮りました!安田講堂といって，東京大学が誇る歴史的建築物です．ご存知の方も多いと思います．
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+          <a class="embeddedLink card" href="#">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize">
+              東京大学で撮りました!
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+          <a class="embeddedLink card" href="#">
+            <img class="cardImg" src="{% static 'pages/media/Yasuda.JPG' %}" alt="">
+
+            <div class="cardDescription --mainCharSize">
+              東京大学で撮りました!
+            </div>
+
+            <div class="cardCreatedAt --annotationCharSize">
+              2022.3.8
+            </div>
+          </a>
+
+      </div> -->
+
+      <div class="headlineWithLeftLine --headlineCharSize">
+        UPDATE
+      </div>
+
+      <ul class="datedInfo">
+
+        {% for update_info in update_infos %}
+        <a class="defaultLink" href="#">
+          <li class="datedInfoItem hovOptPointingRight">
+            <div class="datedInfoDate">
+              {{ update_info.created_at|date:"nS F, Y" }}
+            </div>
+            <div class="datedInfoContent">
+              {{ update_info.title }}
+            </div>
+          </li>
+        </a>
+        {% endfor %}
+
+        <a class="defaultLink" href="#">
+          <li class="datedInfoItem hovOptPointingRight">
+            <div class="datedInfoDate">
+              1st  Feb., 2022
+            </div>
+            <div class="datedInfoContent">
+              First domain was taken. Check abricot.jp up.
+            </div>
+          </li>
+        </a>
+        <a class="defaultLink" href="#">
+          <li class="datedInfoItem hovOptPointingRight">
+            <div class="datedInfoDate">
+              17th Jul., 2020
+            </div>
+            <div class="datedInfoContent">
+              Now domain was taken.
+            </div>
+          </li>
+        </a>
+        
+      </ul>
+
+      <div class="allUpdateInfo">
+        <a class="hovOptPointingRight buttonHoveringChange --annotationCharSize" href="#">
+          ALL UPDATE
+        </a>
+      </div>
+
+      {% include "global/includes/google_custom_search.html" %}
+      
+
+    </div>
+
+  </main>
+
+
+{% endblock %}

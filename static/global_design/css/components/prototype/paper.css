@@ -1,0 +1,8 @@
+.paper {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .5);
+  border-radius: 3px;
+  z-index: 1;
+}
+.paper_headline {
+  font: var(--secondHeadlineFont);
+}

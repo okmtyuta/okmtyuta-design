@@ -1,0 +1,126 @@
+.singleFrame {
+  margin: 40px auto;
+  padding: 30px 30px;
+  max-width: 1024px;
+}
+
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .doubleFrame {
+    display: grid;
+    grid-template:  "mainFrame navFrame" /
+                    3fr        1fr;
+    max-width: 1024px;
+    padding: 30px 30px;
+    margin: 40px auto;
+    justify-content: center;
+    gap: 60px;
+  }
+  .doubleFrame_main {
+    grid-area: mainFrame;
+  }
+  .doubleFrame_nav {
+    grid-area: navFrame;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .doubleFrame {
+    display: grid;
+    grid-template:  "mainFrame navFrame" /
+                    2fr        1fr;
+    max-width: 1024px;
+    padding: 30px 30px;
+    margin: 40px auto;
+    justify-content: center;
+    gap: 30px;
+  }
+  .doubleFrame_main {
+    grid-area: mainFrame;
+  }
+  .doubleFrame_nav {
+    grid-area: navFrame;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .doubleFrame {
+    margin: 40px auto;
+    padding: 30px 30px;
+    max-width: 1024px;
+  }
+  .doubleFrame_nav {
+    display: none;
+  }
+  .doubleFrame_main {
+
+  }
+}
+
+/* For PC */
+@media screen and (min-width: 1025px) {
+  /* Common */
+  .tripleFrame {
+    display: grid;
+    grid-template:  "asideFrame mainFrame navFrame" /
+                    3fr         7fr        3fr;
+    max-width: 1024px;
+    padding: 30px 0;
+    margin: 40px auto;
+    justify-content: center;
+    gap: 60px;
+  }
+  .tripleFrame_aside {
+    grid-area: asideFrame;
+  }
+  .tripleFrame_main {
+    grid-area: mainFrame;
+  }
+  .tripleFrame_nav {
+    grid-area: navFrame;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .tripleFrame {
+    display: grid;
+    grid-template:  "asideFrame mainFrame" /
+                    4fr         7fr      ;
+    max-width: 1024px;
+    padding: 30px 0;
+    margin: 20px 50px;
+    justify-content: center;
+    gap: 30px;
+  }
+  .tripleFrame_nav {
+    grid-area: asideFrame;
+  }
+  .tripleFrame_aside {
+    display: none;
+  }
+  .tripleFrame_main {
+
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .tripleFrame {
+    padding: 30px 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .tripleFrame_nav {
+    display: none;
+  }
+  .tripleFrame_aside {
+    display: none;
+  }
+  .tripleFrame_main {
+
+  }
+}
+

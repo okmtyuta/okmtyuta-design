@@ -1,0 +1,58 @@
+.embeddedLink {
+  text-decoration: none;
+  color: inherit;
+}
+.embeddedLink:hover {
+  color: var(--themeColor);
+  transition: color .3s;
+}
+.defaultLink {
+  color: var(--secondThemeColor);
+  text-decoration: none;
+  transition: color .3s;
+}
+.defaultLink:visited {
+  color: var(--themeColor);
+}
+.defaultLink:hover {
+  color: var(--themeColor);
+}
+.explicitLink {
+  text-decoration: underline;
+  color: inherit;
+}
+.noDecoratedLink {
+  text-decoration: none;
+  color: inherit;
+}
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .hoverableLink  {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+  }
+  .hoverableLink:hover {
+    text-decoration: none;
+    font: inherit;
+    color: #595857;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .hoverableLink {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  .hoverableLink {
+    text-decoration: none;
+    font: inherit;
+    color: inherit;
+  }
+}

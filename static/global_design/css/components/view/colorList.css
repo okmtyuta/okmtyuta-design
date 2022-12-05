@@ -1,0 +1,22 @@
+.colourList {
+  gap: 10px;
+}
+.colourList_item {
+
+}
+.suou {
+  background-color: #9e3d3f;
+  color: white;
+}
+.konpeki {
+  background-color: #007bbb;
+  color: white;
+}
+.moegi {
+  background-color: #aacf53;
+  color: white;
+}
+.yohkan {
+  background-color: #383c3c;
+  color: white;
+}

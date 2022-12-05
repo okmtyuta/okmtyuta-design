@@ -1,0 +1,17 @@
+{% load static %}
+
+{% if twitter_card %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@nostalon_JP" />
+  <meta name="twitter:domain" content="okmtyuta.nostalon.jp" />
+  <meta name="twitter:title" content="{{ twitter_card.title }}" />
+  <meta name="twitter:description" content="{{ twitter_card.description }}" />
+  <meta name="twitter:image" content="{{ twitter_card.thumbnail.url }}" />
+{% else %}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@nostalon_JP" />
+  <meta name="twitter:domain" content="okmtyuta.nostalon.jp" />
+  <meta name="twitter:title" content="Nostalon" />
+  <meta name="twitter:description" content="Nostalon New News Network" />
+  <meta name="twitter:image" content="" />
+{% endif %}

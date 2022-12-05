@@ -1,0 +1,204 @@
+/* For PC */
+@media screen and (min-width: 1025px) {
+  .cardList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .card {
+    width: calc(100% / 4);
+    padding: 10px;
+    box-sizing: border-box;
+    height: 350px;
+    display: grid;
+    grid-template:
+      "cardImg"         auto
+      "cardDescription" 5fr
+      "cardCreatedAt"   1fr /
+      100%;
+  }
+  .cardImg {
+    grid-area: cardImg;
+    width: 100%;
+  }
+  .cardDescription {
+    grid-area: cardDescription;
+    padding: 10px 0;
+    font: var(--subBodyFont);
+  }
+  .cardCreatedAt {
+    grid-area: cardCreatedAt;
+    display: flex;
+    align-self: center;
+    font: var(--captionFont);
+    color: var(--lightGray);
+    border-bottom: var(--lighterGray) solid 1px;
+  }
+  .--cardIsNew {
+    position: relative;
+  }
+  .--cardIsNew::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0 0;
+    border-color: var(--themeColor) transparent transparent transparent;
+  }
+  .--cardIsNew::after{position: absolute;
+    content: "NEW";
+    font: var(--overlineFont);
+    transform: rotate(315deg);
+    display: block;
+    white-space: pre;
+    color: var(--defaultWhite);
+    top: 22px;
+    left: 14px;
+    text-align: center;
+    z-index: 2;
+    line-height: 1.2;
+  }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .forMobile {
+    display: none;
+  }
+  .buttonHoveringChange {
+    text-align: center;
+  }
+  .cardList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+  .card {
+    width: calc(100% / 3);
+    padding: 10px;
+    box-sizing: border-box;
+    height: 300px;
+    display: grid;
+    grid-template:
+      "cardImg"         auto
+      "cardDescription" 5fr
+      "cardCreatedAt"   1fr /
+      100%;
+  }
+  .cardImg {
+    grid-area: cardImg;
+    width: 100%;
+  }
+  .cardDescription {
+    grid-area: cardDescription;
+    padding: 10px 0;
+    font: var(--subBodyFont);
+  }
+  .cardCreatedAt {
+    grid-area: cardCreatedAt;
+    display: flex;
+    align-self: center;
+    font: var(--captionFont);
+    color: var(--lightGray);
+    border-bottom: var(--lighterGray) solid 1px;
+  }
+  
+  .--cardIsNew {
+    position: relative;
+  }
+  .--cardIsNew::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0 0;
+    border-color: var(--themeColor) transparent transparent transparent;
+  }
+  .--cardIsNew::after{position: absolute;
+    font: var(--overlineFont);
+    transform: rotate(315deg);
+    display: block;
+    white-space: pre;
+    color: var(--defaultWhite);
+    top: 22px;
+    left: 14px;
+    text-align: center;
+    z-index: 2;
+    line-height: 1.2;
+  }
+}
+
+/* For mobile */
+@media (max-width: 599px) {
+  
+.cardList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.card {
+  width: calc(100% / 2);
+  padding: 10px;
+  box-sizing: border-box;
+  height: 250px;
+  display: grid;
+  grid-template:
+    "cardImg"         auto
+    "cardDescription" 5fr
+    "cardCreatedAt"   1fr /
+    100%;
+}
+.cardImg {
+  grid-area: cardImg;
+  width: 100%;
+}
+.cardDescription {
+  grid-area: cardDescription;
+  padding: 10px 0;
+  font: var(--subBodyFont);
+}
+.cardCreatedAt {
+  grid-area: cardCreatedAt;
+  display: flex;
+  align-self: center;
+  font: var(--captionFOnt);
+  color: var(--lightGray);
+  border-bottom: var(--lighterGray) solid 1px;
+}
+
+.--cardIsNew {
+  position: relative;
+}
+.--cardIsNew::before {
+  position: absolute;
+  content: "";
+  left: 10px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 50px 0 0;
+  border-color: var(--themeColor) transparent transparent transparent;
+}
+.--cardIsNew::after{position: absolute;
+  font: var(--overlineFont);
+  transform: rotate(315deg);
+  display: block;
+  white-space: pre;
+  color: var(--defaultWhite);
+  top: 22px;
+  left: 14px;
+  text-align: center;
+  z-index: 2;
+  line-height: 1.2;
+}
+}

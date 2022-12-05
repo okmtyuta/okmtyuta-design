@@ -1,0 +1,30 @@
+.article {
+  border-top: var(--lightGray) solid 1px;
+  border-bottom: var(--lightGray) solid 1px;
+  margin-bottom: 20px;
+}
+.articleCreatedAt {
+  color: var(--themeColor);
+  font: var(--firstHeadlineFont);
+  padding: 20px 0;
+}
+.articleThumbnail {
+  width: 100%;
+}
+.articleBody {
+  padding: 20px 0;
+  font: var(--bodyFont);
+  color: var(--defaultCharColor);
+}
+.articleFooter {
+
+}
+.articleInfo {
+  justify-content: start;
+  font: var(--subBodyFont);
+}
+
+.copiedAlert {
+  display: none;
+  color: var(--themeColor);
+}
