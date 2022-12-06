@@ -8,3 +8,4 @@ media
 .DS_STORE
 Memo.md
 */__pycache__/
+.vscode/
