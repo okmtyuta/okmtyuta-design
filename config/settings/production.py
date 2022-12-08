@@ -12,7 +12,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["api.okmtyuta.jp", "127.0.0.1"]
+ALLOWED_HOSTS = [os.environ["ALLOWED_HOSTS"].split(",")]
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
