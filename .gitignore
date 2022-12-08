@@ -2,7 +2,7 @@
 db.sqlite3
 staticfiles
 */migrations/
-!__init__.py
+!*/migrations/__init__.py
 memo.txt
 media
 */media/
