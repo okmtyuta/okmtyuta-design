@@ -1,15 +1,15 @@
 build-okmtyuta-design:
 	echo "okmtyuta-designのビルドを行います"
 	docker-compose build okmtyuta-design
-run-okmeyuta-design:
+run-okmtyuta-design:
 	echo "okmtyuta-designを起動します"
-	docker-compose up okmtyuta-design
+	docker-compose up -d okmtyuta-design
 build-database:
 	echo "データベースのビルドを行います"
 	docker-compose build database
 run-database:
 	echo "データベースを起動します"
-	docker-compose up database
+	docker-compose up -d database
 
 run-makemigrations:
 	@echo "マイグレーションファイルを作成します"
