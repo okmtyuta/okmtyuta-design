@@ -10,17 +10,21 @@ services:
     tty: true
     ports:
       - 8001:8001
-    command: gunicorn --bind '0.0.0.0:8001' --chdir /app config.wsgi
+    # command: gunicorn --bind '0.0.0.0:8001' --chdir /app config.wsgi
     env_file:
       - .env
+    depends_on:
+      - database
 
-  # database:
-  #   image: postgres:14.6
-  #   tty: true
-  #   environment:
-  #     POSTGRES_DB: ${POSTGRES_DB}
-  #     POSTGRES_USER: ${POSTGRES_USER}
-  #     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-  #   ports:
-  #     - ${POSTGRES_PORT}
-  #   command: -p ${POSTGRES_PORT}
+  database:
+    image: postgres:14.6
+    tty: true
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - ${POSTGRES_PORT}:${POSTGRES_PORT}
+    command: -p ${POSTGRES_PORT}

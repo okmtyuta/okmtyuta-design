@@ -19,12 +19,12 @@ ALLOWED_HOSTS = ["nostalon.jp", "okmtyuta.nostalon.jp", "api.nostalon.jp"]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'nostalon', 
-        'USER': 'okmtyuta',  
-        'PASSWORD': 'h_r*NTS9kiFx',  
-        'HOST': '160.16.132.244', 
-        'PORT': '3306', 
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ["POSTGRES_DB"], 
+        'USER': os.environ["POSTGRES_USER"],  
+        'PASSWORD': os.environ["POSTGRES_PASSWORD"],  
+        'HOST': 'localhost', 
+        'PORT': os.environ["POSTGRES_PORT"], 
     }
 }
 

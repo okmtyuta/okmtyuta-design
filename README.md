@@ -13,6 +13,11 @@
 
 - `DJANGO_SETTINGS_MODULE`: 読み込む setting ファイルの指定。`config.settings.local || config.settings.production`
 - `SECRET_KEY`: シークレットキー
+- `DATABASE_TYPE`: データベースの種類。`sqlite || postgresql`
+- `POSTGRES_DB`: Postgresのテーブル名
+- `POSTGRES_USER`: Postgresのユーザー名
+- `POSTGRES_PASSWORD`: Postgresのパスワード
+- `POSTGRES_PORT`: Postgresのポート番号
 
 ### Migrate
 
