@@ -19,5 +19,5 @@ run-migrate:
 	docker-compose exec okmtyuta-design python3 manage.py migrate
 runserver:
 	@echo "サーバーを起動します"
-	docker-compose exec okmtyuta-design gunicorn --bind '0.0.0.0:8001' --chdir /app config.wsgi
+	docker-compose exec okmtyuta-design gunicorn --bind '0.0.0.0:8002' --chdir /app config.wsgi
 	# docker-compose exec okmtyuta-design python3 manage.py runserver 0.0.0.0:8001
