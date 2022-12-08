@@ -13,10 +13,10 @@ run-database:
 
 run-makemigrations:
 	@echo "マイグレーションファイルを作成します"
-	docker compose exec okmtyuta-design python3 manage.py makemigrations
+	docker-compose exec okmtyuta-design python3 manage.py makemigrations
 run-migrate:
 	@echo "マイグレートを実行します"
-	docker compose exec okmtyuta-design python3 manage.py migrate
+	docker-compose exec okmtyuta-design python3 manage.py migrate
 runserver:
 	@echo "サーバーを起動します"
 	docker-compose exec okmtyuta-design gunicorn --bind '0.0.0.0:8001' --chdir /app config.wsgi
