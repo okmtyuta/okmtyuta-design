@@ -64,20 +64,45 @@
     {% include "includes/twitter_card.html" %}
   </head>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", (e) => {
+      const searchForm = document.getElementById("search-form");
+
+      for (const tag of document.getElementsByClassName("tag")) {
+        tag.addEventListener("click", () => {
+          const pk = tag.dataset.pk;
+          const checkbox = document.querySelector(
+            `input[name="tags"][value="${pk}"]`
+          );
+          if (checkbox.checked) {
+            checkbox.checked = false;
+          } else {
+            checkbox.checked = true;
+          }
+          searchForm.submit();
+        });
+      }
+
+      for (const check of document.getElementsByName("tags")) {
+        check.addEventListener("change", () => {
+          searchForm.submit();
+        });
+      }
+    });
+  </script>
+
   <body>
     <header class="header">
       <div class="headerLogo">
         <div class="nostalonLogoWhiten --titleCharSize">
-          <a class="noDecoratedLink" href="{% url 'pages:nostalon_top' %}"
-            >okmtyuta</a
-          >
+          <a class="noDecoratedLink" href="{% url 'top:top' %}">okmtyuta</a>
         </div>
       </div>
 
       <ul class="rowList--grid headerUtils">
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'pages:coming_soon' %}"
+          href="{% url 'top:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> search </span>
@@ -99,7 +124,7 @@
       <ul class="rowList--grid headerMenu">
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'pages:coming_soon' %}"
+          href="{% url 'top:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> functions </span>
@@ -109,17 +134,17 @@
 
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'pages:coming_soon' %}"
+          href="{% url 'gallery:illust_list' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> gesture </span>
-            <div class="itemWithIconContent">Illust</div>
+            <div class="itemWithIconContent">Gallery</div>
           </li>
         </a>
 
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'pages:coming_soon' %}"
+          href="{% url 'top:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> photo </span>
@@ -129,7 +154,7 @@
 
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'pages:coming_soon' %}"
+          href="{% url 'top:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> code </span>
@@ -139,7 +164,7 @@
 
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'articles:article_list' %}"
+          href="{% url 'top:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> article </span>
@@ -189,12 +214,12 @@
             <div class="footerMenuCategory thirdHeadlineWithLeftLine">SNS</div>
             <ul class="footerMenuList rowList--flex">
               <li class="footerMenuItem colListItem">
-                <a class="embeddedLink" href="{% url 'pages:coming_soon' %}"
+                <a class="embeddedLink" href="{% url 'top:top' %}"
                   ><i class="fa-brands fa-twitter fa-2x"></i
                 ></a>
               </li>
               <li class="footerMenuItem colListItem">
-                <a class="embeddedLink" href="{% url 'pages:coming_soon' %}"
+                <a class="embeddedLink" href="{% url 'top:top' %}"
                   ><i class="fa-brands fa-youtube fa-2x"></i
                 ></a>
               </li>
@@ -205,13 +230,13 @@
 
       <ul class="forMobile">
         <li>
-          <a class="bandLink" href="{% url 'pages:coming_soon' %}">
+          <a class="bandLink" href="{% url 'top:top' %}">
             <div class="bandLinkContent">To be prepared</div>
           </a>
         </li>
 
         <li>
-          <a class="bandLink" href="{% url 'pages:coming_soon' %}">
+          <a class="bandLink" href="{% url 'top:top' %}">
             <div class="bandLinkContent">To be prepared</div>
           </a>
         </li>

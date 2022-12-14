@@ -21,7 +21,7 @@
   font: var(--bodySerifFont);
 }
 .newspaper_footer {
-  padding: 30px 10px 30px 10px;
+  padding: 18px 0 18px 0;
 }
 .newspaper_footer_action {
   justify-content: flex-start;

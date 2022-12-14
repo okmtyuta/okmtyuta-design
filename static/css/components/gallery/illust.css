@@ -1,0 +1,235 @@
+.illust-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 30px;
+}
+.illust-list-item {
+  border-bottom: var(--lighterGray) solid 1px;
+}
+.illust-list-item-illust > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.illust-list-item-caption {
+  font: var(--captionFont);
+  color: var(--lightGray);
+}
+.illust-list-item-title {
+  font: var(--firstHeadlineFont);
+  color: var(--defaultCharColor);
+  padding: 4px 0;
+}
+.illust-list-item-author {
+  font: var(--subBodyFont);
+  color: var(--defaultCharColor);
+}
+.illust-list-item-illust-tag-list {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  font: var(--subBodyFont);
+}
+.illust-list-item-illust-tag-list-item {
+  color: var(--lightGray);
+}
+.illust-item-list-author {
+  font: var(--captionFont);
+  color: var(--lightGray);
+}
+.illust-list-item-description {
+  font: var(--bodyFont);
+  padding: 12px 0;
+}
+.illust-list-item-pick-up {
+  color: var(--themeColor);
+}
+.illust {
+  border-top: var(--lightGray) solid 1px;
+  border-bottom: var(--lightGray) solid 1px;
+  margin-bottom: 20px;
+}
+.illust-created-at {
+  color: var(--themeColor);
+  font: var(--firstHeadlineFont);
+  padding: 20px 0;
+}
+.illust-illust {
+  width: 100%;
+}
+.illust-body {
+  padding: 20px 0;
+  font: var(--bodyFont);
+  color: var(--defaultCharColor);
+}
+.illust-fotter {
+}
+.illust-info {
+  justify-content: start;
+  font: var(--subBodyFont);
+}
+.illust-comment-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.illust-comment-list-item {
+}
+.illust-comment-list-item-name {
+  font: var(--subBodyFont);
+  color: var(--lightGray);
+  padding: 4px 0;
+}
+.illust-comment-list-item-text {
+  padding: 4px;
+  line-height: 1.6;
+  color: var(--defaultCharColor);
+}
+.illust-comment-list-item-date {
+  font: var(--subBodyFont);
+  color: var(--lightGray);
+}
+.copiedAlert {
+  display: none;
+  color: var(--themeColor);
+}
+
+/* カスタムチェックボックス */
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox:checked + .custom-checkbox-label {
+  background: var(--themeColor);
+  color: #fff;
+}
+
+.custom-checkbox-label {
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  border: solid 1px #ccc;
+  transition: 0.25s;
+  padding: 4px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-checkbox-label:hover {
+  opacity: 0.5;
+}
+
+#id_key_word {
+  height: 32px;
+  width: 80%;
+}
+#search-button {
+  height: 32px;
+  font-size: 14px;
+  -webkit-appearance: none;
+  padding: 4px 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  vertical-align: bottom;
+  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
+
+  box-sizing: border-box;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+
+  cursor: pointer;
+}
+
+.inline-checkbox {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  margin: 6px 0 24px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  font-size: 14px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
+}
+
+button,
+a.button {
+  font-size: 14px;
+  -webkit-appearance: none;
+  padding: 4px 16px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: solid 1px #ccc;
+  vertical-align: bottom;
+  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
+
+  /* a要素用の設定 */
+  box-sizing: border-box;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+
+  /* button要素用の設定 */
+  cursor: pointer;
+}
+
+button:hover,
+a.button:hover {
+  opacity: 0.5;
+}
+
+button.btn-link,
+a.btn-link {
+  border: none;
+  color: #00809d;
+  vertical-align: initial;
+}
+#select-tags {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.helptext {
+  font-size: 14px;
+}
+
+.field {
+  margin-bottom: 24px;
+}
+
+.field > * {
+  display: block;
+  width: 100%;
+}
+
+.comments > a {
+  color: var(--defaultCharColor);
+}
+.comments > a:hover {
+  color: var(--themeColor);
+}
+.copyUrl {
+  color: var(--defaultCharColor);
+}
+.copyUrl:hover {
+  color: var(--themeColor);
+}

@@ -23,7 +23,6 @@
   justify-content: start;
   font: var(--subBodyFont);
 }
-
 .copiedAlert {
   display: none;
   color: var(--themeColor);
