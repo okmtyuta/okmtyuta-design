@@ -5,3 +5,8 @@
   grid-gap: 5px;
   height: 100%;
 }
+.itemWithIcon > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}

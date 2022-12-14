@@ -1,0 +1,45 @@
+{% extends "extends/base.html" %} {% load static %} {% block main %}
+
+<main class="main">
+  <div class="singleFrame">
+    <div class="pageTitle">
+      Definition of manifolds and their interpretation.
+    </div>
+
+    <p class="paragraph">Let us give the definition of manifold:</p>
+
+    <div class="mathPaper def">
+      Assume $m\geq 0$ and $r = 0, 1, 2, \cdots, \infty$. "$\left( M, \left\{
+      U_{\alpha}, \varphi_{\alpha}, V_{\alpha} \right\}_{\alpha\in A} \right)$
+      is $m$-dimensional $C^r$ manifold" means following three conditions hold:
+      <div class="itemization">
+        <li class="itemization_item">
+          <div class="itemization_item_heading">(1)</div>
+          $M$ is a Housdorff space. $U_\alpha\subset M$ and $V_\alpha\subset
+          \mathbb{R}^m$ is a open set, and $\varphi_\alpha: U_\alpha\to
+          V_\alpha$ is $C^r$-diffeomorphism for all $\alpha$,
+        </li>
+
+        <li class="itemization_item">
+          <div class="itemization_item_heading">(2)</div>
+          $\bigcup_{\alpha\in A} U_\alpha = M$,
+        </li>
+
+        <li class="itemization_item">
+          <div class="itemization_item_heading">(3)</div>
+          For all $\alpha, \beta\in A$,
+          <div class="equation">
+            \[ \varphi_\alpha\circ\varphi_\beta^{-1}: \varphi_\alpha\left(
+            U_\alpha\cap U_\beta \right) \to\varphi_\beta\left( U_\alpha\cap
+            U_\beta \right) \]
+          </div>
+          is $C^r$-diffeomorphism.
+        </li>
+      </div>
+    </div>
+
+    {% include "includes/footer_actions.html" %}
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends "extends/base.html" %} {% load static %} {% block main %}
+
+<main class="main">
+  <div class="doubleFrame">
+    <div class="doubleFrame_main">
+      <div>
+        <!-- {% if illust_search_form.cleaned_data.tags %}
+        <p class="tags" id="select-tags">
+          選択しているタグ: 
+          {% for tag in illust_search_form.cleaned_data.tags %}
+          <span class="tag" data-pk="{{ tag.pk }}">{{ tag.name }}</span>
+          {% endfor %}
+        </p>
+        {% endif %} -->
+
+        <form id="search-form" action="" method="GET">
+          {{ illust_search_form.key_word }}
+          <button type="submit" id="search-button">検索</button>
+          <div class="inline-checkbox">{{ illust_search_form.tags }}</div>
+        </form>
+      </div>
+
+      <ul class="illust-list">
+        {% for illust in illusts %}
+        <li class="illust-list-item">
+          <div class="illust-list-item-illust">
+            <img src="{{ illust.illust.url }}" alt="" />
+          </div>
+
+          <div class="illust-list-item-caption">{{ illust.caption }}</div>
+
+          <ul class="illust-list-item-illust-tag-list">
+            {% for illust_tag in illust.illust_tags.all %}
+            <li class="illust-list-item-illust-tag-list-item">
+              # {{ illust_tag }}
+            </li>
+            {% endfor %}
+          </ul>
+
+          <div class="illust-list-item-title">
+            <a
+              class="hoverableLink"
+              href="{% url 'gallery:illust_detail' illust.pk %}"
+              >{{ illust.title }}</a
+            >
+          </div>
+
+          <div class="illust-list-item-author">By {{ illust.author }}</div>
+
+          <div class="illust-list-item-description">
+            {{ illust.description }}
+          </div>
+        </li>
+
+        {% empty %}
+        <div class="illust-list-item-title">
+          イラストが見つかりませんでした。
+        </div>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <nav class="doubleFrame_nav">
+      <ul class="illust-list">
+        <li class="illust-item-list">
+          <div class="illust-list-item-pick-up">Live Article</div>
+
+          <div class="illust-list-item-title">
+            <a class="hoverableLink" href="{% url 'pages:global_design_guideline' %}">
+              Website design policy published
+            </a>
+          </div>
+
+          <div class="illust-list-item-author">By okmtyuta</div>
+
+          <div class="illust-list-item-description">New Article!</div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</main>
+
+{% endblock %}

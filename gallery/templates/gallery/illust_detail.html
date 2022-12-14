@@ -1,0 +1,77 @@
+{% extends "extends/base.html" %} {% load static %} {% block main %}
+
+<main class="main">
+  <div class="doubleFrame">
+    <div class="doubleFrame_main">
+      <div class="pageTitle">{{ illust.title }}</div>
+
+      <div class="illust">
+        <div class="illust-created-at">
+          {{ illust.created_at|date:"nS F, Y" }}
+        </div>
+
+        <div class="illust-list-item-illust">
+          <img src="{{ illust.illust.url }}" alt="" />
+        </div>
+
+        <div class="illust-body">{{ illust.body }}</div>
+
+        <div class="itemWithIcon illust-info">
+          <div class="illust-info-author">ISUUED BY {{ illust.author }}</div>
+          <img
+            src="{% static 'media/generalLib.jpeg' %}"
+            class="illust-info-author-icon circleIcon"
+          />
+        </div>
+      </div>
+
+      <div class="newspaper_footer">
+        <div class="newspaper_footer_action">
+          <div class="comments itemWithIcon newspaper_footer_action_item">
+            <a href="{% url 'gallery:illust_comment' illust.pk %}">
+              <span class="material-symbols-outlined"> comment </span>
+              Comments
+            </a>
+          </div>
+
+          <!-- <div class="shares itemWithIcon newspaper_footer_action_item">
+            <span class="material-symbols-outlined"> ios_share </span>
+
+            Share
+          </div> -->
+
+          <div class="itemWithIcon copyUrl newspaper_footer_action_item">
+            <span class="material-symbols-outlined"> link </span>
+
+            Link
+            <div class="copiedAlert">Copied</div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="illust-comment-list">
+        {% for comment in comments %} {% if comment.is_public %}
+        <li class="illust-comment-list-item">
+          <div class="illust-comment-list-item-date">
+            {{ comment.created_at|date:"nS F, Y" }}
+          </div>
+          <div class="illust-comment-list-item-name">{{ comment.name }}</div>
+          <div class="illust-comment-list-item-text">{{ comment.text }}</div>
+        </li>
+        {% endif %} {% endfor %}
+      </ul>
+    </div>
+
+    <div class="doubleFrame_nav --stick">
+      <div class="headlineWithLeftLine">Getting Started</div>
+      <ul class="colList">
+        <li class="colListItem">INSTALLATION</li>
+        <li class="colListItem">CREATE APP</li>
+        <li class="colListItem">fjaklf</li>
+        <li class="colListItem">fjaklf</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
