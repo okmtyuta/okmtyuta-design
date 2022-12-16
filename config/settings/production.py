@@ -13,6 +13,7 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ["ALLOWED_HOSTS"].split(",")]
+CSRF_TRUSTED_ORIGINS = [os.environ["ALLOWED_HOSTS"].split(",")]
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
