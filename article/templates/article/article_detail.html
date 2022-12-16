@@ -1,0 +1,101 @@
+{% extends "extends/base.html" %} {% load static %} {% block main %}
+
+<main class="main">
+  <div class="singleFrame">
+    <div class="article">
+      <div class="article-title">{{ article.title }}</div>
+
+      <div class="article-author">By {{ article.author }}</div>
+
+      <div class="article-postedAt">
+        Posted at {{ article.created_at|date:"nS F, Y" }}
+      </div>
+
+      <div class="article-body">
+        {% autoescape off %} {{ article.body }} {% endautoescape %}
+      </div>
+
+      <div class="itemWithIcon illust-info">
+        <div class="illust-info-author">ISUUED BY {{ illust.author }}</div>
+        <img
+          src="{% static 'media/generalLib.jpeg' %}"
+          class="illust-info-author-icon circleIcon"
+        />
+      </div>
+
+
+
+      <!-- <div class="paper updateLogs">
+          <div class="paper_headline">
+            HEADLINE
+          </div>
+  
+          <ul class="itemization">
+  
+            <li class="itemization-item">
+              <div class="itemization-item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization-item">
+              <div class="itemization-item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization-item">
+              <div class="itemization-item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization-item">
+              <div class="itemization-item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+            <li class="itemization-item">
+              <div class="itemization-item_heading">
+                TODAY
+              </div>
+              created...
+            </li>
+  
+          </ul>
+        </div> -->
+
+    </div>
+
+    <div class="headlineSerif">
+      関連記事
+    </div>
+    <ul class="related-article-list">
+      {% for related_article in article.related_articles.all %}
+
+      <li class="related-article-list-item">
+
+        <div class="related-article-list-item-title">
+          <a
+            class="hoverableLink"
+            href="{% url 'article:article_detail' article.pk %}"
+          >
+            {{ related_article.title }}
+          </a>
+        </div>
+        <div class="related-article-list-item-description">
+
+            {{ related_article.description }}
+        </div>
+
+      </li>
+
+      {% empty %}
+        <div class="article-list-item-title">No Article was posted</div>
+      {% endfor %}
+    </ul>
+  </div>
+</main>
+
+{% endblock %}

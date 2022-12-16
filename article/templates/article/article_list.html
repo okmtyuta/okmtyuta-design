@@ -1,0 +1,88 @@
+{% extends "extends/base.html" %} {% load static %} {% block main %}
+
+<main class="main">
+  <div class="tripleFrame">
+    <aside class="tripleFrame_aside">
+
+      <div>
+        <ul class="article-list">
+          {% for picked_up_article in picked_up_articles %}
+          <li class="article-list-item">
+            <div class="article-list-item-title">
+              <a
+                class="hoverableLink"
+                href="{% url 'pages:article_detail' picked_up_article.pk %}"
+                >{{ picked_up_article.title }}</a
+              >
+            </div>
+
+            <div class="article-list-item-author">
+              By {{ picked_up_article.author }}
+            </div>
+
+            <div class="article-list-item-description">
+              {{ picked_up_article.description }}
+            </div>
+          </li>
+
+          {% empty %}
+
+          <div class="article-list-item-title">No Article was picked up</div>
+
+          {% endfor %}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="tripleFrame_main">
+      <ul class="article-list">
+        {% for article in articles %}
+        <li class="article-list-item">
+          <div class="article-list-item-thumbnail">
+            <img src="{{ article.thumbnail.url }}" alt="" />
+          </div>
+
+          <div class="article-list-item-caption">{{ article.caption }}</div>
+
+          <div class="article-list-item-title">
+            <a
+              class="hoverableLink"
+              href="{% url 'article:article_detail' article.pk %}"
+              >{{ article.title }}</a
+            >
+          </div>
+
+          <div class="article-ist-item-author">By {{ article.author }}</div>
+
+          <div class="article-list-item-description">
+            {{ article.description }}
+          </div>
+        </li>
+
+        {% empty %}
+        <div class="article-list-item-title">No Article was posted</div>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <nav class="tripleFrame_nav">
+      <ul class="article-list">
+        <li class="article-list-item">
+          <div class="article-list-item-pick-up">Live Article</div>
+
+          <div class="article-list-item-title">
+            Website design policy published
+          </div>
+
+          <div class="article-list-item-author">By okmtyuta</div>
+
+          <div class="article-list-item-description">
+            Website design policy published.
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</main>
+
+{% endblock %}

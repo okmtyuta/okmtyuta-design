@@ -8,7 +8,7 @@ dotenv.load_dotenv()
 
 SECRET_KEY = os.environ["SECRET_KEY"]
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 ALLOWED_HOSTS.extend(os.environ["ALLOWED_HOSTS"].split(","))

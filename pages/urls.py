@@ -5,7 +5,8 @@ from . import views
 app_name = "pages"
 
 urlpatterns = [
+    path('', views.top, name="top"),
     path('users/detail', views.user_detail, name="user_detail"),
-    path('guidelines/global_design', views.GlobalDesignGuidelineView.as_view(), name="global_design_guideline"),
+    path('design_policy', views.DesignPolicy.as_view(), name="design_policy"),
     path('variable', views.variable, name="variable"),
 ]
