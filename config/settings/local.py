@@ -1,6 +1,6 @@
 from .base import *
 
-SECRET_KEY = 'django-insecure-3tdb-maoo@kc^5++$v7*td$l_%(iqqh2in#%k1jkv(94^8t!0q'
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = True
 

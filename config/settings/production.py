@@ -10,8 +10,9 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = True
 
-ALLOWED_HOSTS = [os.environ["ALLOWED_HOSTS"].split(",")]
-CSRF_TRUSTED_ORIGINS = ["https://design.okmtyuta.jp"]
+ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS.extend(os.environ["ALLOWED_HOSTS"].split(","))
+CSRF_TRUSTED_ORIGINS = [os.environ["CSRF_TRUSTED_ORIGINS"]]
 
 DATABASES = {
     'default': {
