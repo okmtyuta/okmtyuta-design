@@ -6,17 +6,12 @@ from .base import *
 
 dotenv.load_dotenv()
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ["ALLOWED_HOSTS"].split(",")]
-CSRF_TRUSTED_ORIGINS = [os.environ["ALLOWED_HOSTS"].split(",")]
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+CSRF_TRUSTED_ORIGINS = ["https://design.okmtyuta.jp"]
 
 DATABASES = {
     'default': {
@@ -28,9 +23,6 @@ DATABASES = {
         'PORT': os.environ["POSTGRES_PORT"], 
     }
 }
-
-# Password validation
-# https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -47,8 +39,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
 STATIC_ROOT = '/home/okmtyuta/.okmtyuta/nginx/public/static'
