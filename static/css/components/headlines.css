@@ -75,3 +75,6 @@
   font: var(--firstHeadlineFont);
   font-weight: bold;
 }
+.headlineSerif {
+  font: var(--headlineSerifFont);
+}

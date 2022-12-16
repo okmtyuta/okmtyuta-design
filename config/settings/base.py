@@ -11,10 +11,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages',
-    # 'newspapers',
-    # 'articles',
+    'article',
     "gallery",
-    "top",
 ]
 
 MIDDLEWARE = [

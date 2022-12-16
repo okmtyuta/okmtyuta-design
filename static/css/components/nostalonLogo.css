@@ -1,12 +1,12 @@
 .nostalonLogoThemed {
-  font-family: var(--frakturFont);
+  font-family: var(--anton);
   color: var(--themeColor);
 }
 .nostalonLogoWhiten {
-  font-family: var(--frakturFont);
+  font-family: var(--anton);
   color: var(--defaultWhite);
 }
 .nostalonLogoBlacken {
-  font-family: var(--frakturFont);
+  font-family: var(--anton);
   color: var(--defaultBlack);
 }

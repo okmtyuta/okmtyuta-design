@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nixie+One&family=UnifrakturMaguntia&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Fredericka+the+Great&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:wght@400;700&family=UnifrakturMaguntia&display=swap"
       rel="stylesheet"
     />
 
@@ -95,14 +95,14 @@
     <header class="header">
       <div class="headerLogo">
         <div class="nostalonLogoWhiten --titleCharSize">
-          <a class="noDecoratedLink" href="{% url 'top:top' %}">okmtyuta</a>
+          <a class="noDecoratedLink" href="{% url 'pages:top' %}">okmtyuta</a>
         </div>
       </div>
 
       <ul class="rowList--grid headerUtils">
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'top:top' %}"
+          href="{% url 'pages:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> search </span>
@@ -124,7 +124,7 @@
       <ul class="rowList--grid headerMenu">
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'top:top' %}"
+          href="{% url 'pages:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> functions </span>
@@ -142,19 +142,19 @@
           </li>
         </a>
 
-        <a
+        <!-- <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'top:top' %}"
+          href="{% url 'pages:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> photo </span>
             <div class="itemWithIconContent">Picture</div>
           </li>
-        </a>
+        </a> -->
 
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'top:top' %}"
+          href="{% url 'pages:top' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> code </span>
@@ -164,7 +164,7 @@
 
         <a
           class="underlineWhenHoverFromCenter embeddedLink"
-          href="{% url 'top:top' %}"
+          href="{% url 'article:article_list' %}"
         >
           <li class="itemWithIcon headerMenuItem">
             <span class="material-symbols-outlined"> article </span>
@@ -214,12 +214,12 @@
             <div class="footerMenuCategory thirdHeadlineWithLeftLine">SNS</div>
             <ul class="footerMenuList rowList--flex">
               <li class="footerMenuItem colListItem">
-                <a class="embeddedLink" href="{% url 'top:top' %}"
+                <a class="embeddedLink" href="{% url 'pages:top' %}"
                   ><i class="fa-brands fa-twitter fa-2x"></i
                 ></a>
               </li>
               <li class="footerMenuItem colListItem">
-                <a class="embeddedLink" href="{% url 'top:top' %}"
+                <a class="embeddedLink" href="{% url 'pages:top' %}"
                   ><i class="fa-brands fa-youtube fa-2x"></i
                 ></a>
               </li>
@@ -230,13 +230,13 @@
 
       <ul class="forMobile">
         <li>
-          <a class="bandLink" href="{% url 'top:top' %}">
+          <a class="bandLink" href="{% url 'pages:top' %}">
             <div class="bandLinkContent">To be prepared</div>
           </a>
         </li>
 
         <li>
-          <a class="bandLink" href="{% url 'top:top' %}">
+          <a class="bandLink" href="{% url 'pages:top' %}">
             <div class="bandLinkContent">To be prepared</div>
           </a>
         </li>
